@@ -12,14 +12,20 @@ client.DefaultRequestHeaders.Accept.Add(
     new MediaTypeWithQualityHeaderValue("application/vnd.github.v3+json"));
 client.DefaultRequestHeaders.Add("User-Agent", ".NET Foundation Repository Reporter");
 
-await ProcessRepositoriesAsync(client);
+//capturar os resultados e gravar cada nome do repositório no console.
+var repositories = await ProcessRepositoriesAsync(client);
+
+//Exibir o nome de cada repositório
+foreach (var repo in repositories ?? Enumerable.Empty<Repository>())
+    Console.Write(repo.Name);
+
 //Aguarda a tarefa retornada do método de chamada
 //HttpClient.GetStringAsync(String). Esse método envia
 //uma solicitação HTTP GET para o URI especificado. O corpo
 //da resposta é retornado como um String, que está disponível
 //quando a tarefa é concluída. A cadeia de caracteres de
 //json resposta é impressa no console.
-static async Task ProcessRepositoriesAsync(HttpClient client)
+static async Task<List<Repository>> ProcessRepositoriesAsync(HttpClient client)
 {
     //var json = await client.GetStringAsync("https://api.github.com/orgs/dotnet/repos");
 
@@ -36,9 +42,8 @@ static async Task ProcessRepositoriesAsync(HttpClient client)
     //fornece argumentos de tipo para que tipo de objetos devem
     //ser criados a partir do texto JSON.
     var repositories =
-        await JsonSerializer.DeserializeAsync<List<Repository>>(stream);
-
-    //Exibir o nome de cada repositório
-    foreach (var repo in repositories ?? Enumerable.Empty<Repository>())
-        Console.Write(repo.Name);
+        await JsonSerializer.DeserializeAsync<List<Repository>>(stream);   
+    
+    //Retornando os repositórios depois de processar a resposta JSON
+    return repositories ?? new();
 }
