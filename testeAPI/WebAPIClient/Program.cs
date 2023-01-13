@@ -17,7 +17,14 @@ var repositories = await ProcessRepositoriesAsync(client);
 
 //Exibir o nome de cada repositório
 foreach (var repo in repositories ?? Enumerable.Empty<Repository>())
-    Console.Write(repo.Name);
+{    
+    Console.WriteLine($"Name: {repo.Name}");
+    Console.WriteLine($"Homepage: {repo.Homepage}");
+    Console.WriteLine($"GitHub: {repo.GitHubHomeUrl}");
+    Console.WriteLine($"Description: {repo.Description}");
+    Console.WriteLine($"Watchers: {repo.Watchers:#,0}");
+    Console.WriteLine();
+}
 
 //Aguarda a tarefa retornada do método de chamada
 //HttpClient.GetStringAsync(String). Esse método envia
