@@ -13,9 +13,7 @@ namespace ByteBank.Funcionarios
         public double Salario { get; set; }
 
         public double GetBonificacao()
-        {
-            if (_tipo == 1)
-                return Salario;
+        { 
             return Salario * 0.10;
         }
     }
