@@ -34,6 +34,8 @@ namespace ByteBank
             Console.WriteLine(roberta.Nome);
             Console.WriteLine(roberta.GetBonificacao());
 
+            Console.WriteLine("Total de bonificações: " + gerenciador.GetTotalBonificacao());
+
             Console.ReadLine();
         }
     }
