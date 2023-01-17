@@ -12,16 +12,18 @@ namespace _8_Condicional2
         {
             Console.WriteLine("Executando projeto 8 - Condicionais 2");
 
-            int idadeJoao = 16;
-            int quantidadePessoas = 2;
+            int idadeJoao = 18;
+            //int quantidadePessoas = 2;
+            //bool acompanhado = quantidadePessoas >= 2;
+            bool acompanhado = false;
 
-            if (idadeJoao >= 18 || quantidadePessoas >= 2)
+            if (idadeJoao >= 18 && acompanhado == true)
             {
-                Console.WriteLine("João possui mais de 18 anos de idade. Pode entrar.");
+                Console.WriteLine("Pode entrar.");
             }
             else
             {
-                Console.WriteLine("João não possui mais de 18 anos, mas está acompanhado. Pode entrar");
+                Console.WriteLine("Não pode entrar");
             }
             Console.ReadLine();
         }
