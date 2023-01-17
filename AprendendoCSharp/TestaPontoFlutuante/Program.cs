@@ -10,11 +10,7 @@ namespace TestaPontoFlutuante
     {
         static void Main(string[] args)
         {
-            double salario = 1250.70;
-            Console.WriteLine("Meu salário é: " + salario);
-
-            double divisao =  5.0 / 2;
-            Console.WriteLine(divisao);
+            
         }
     }
 }

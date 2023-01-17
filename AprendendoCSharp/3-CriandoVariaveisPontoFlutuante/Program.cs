@@ -30,6 +30,7 @@ namespace _3_CriandoVariaveisPontoFlutuante
 
             Console.WriteLine("A execução acabou. Tecle enter para sair...");
             Console.ReadLine();
+
         }
     }
 }
