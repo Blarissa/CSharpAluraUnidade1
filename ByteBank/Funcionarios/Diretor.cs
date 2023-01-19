@@ -7,12 +7,18 @@ using System.Threading.Tasks;
 
 namespace ByteBank.Funcionarios
 {
-    public class Diretor : Autenticavel
+
+    public class Diretor : FuncionarioAutenticavel
     { 
         public Diretor(string cpf) : base(cpf, 5000) 
         {
             Console.WriteLine("Criando DIRETOR");
 
+        }
+
+        public bool Autenticar(string senha)
+        {
+            return true;
         }
 
         public override double GetBonificacao()

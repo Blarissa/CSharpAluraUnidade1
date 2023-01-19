@@ -7,25 +7,27 @@ using System.Threading.Tasks;
 
 namespace ByteBank.Funcionarios
 {
-    public class GerenteDeConta : FuncionarioAutenticavel
+    public class FuncionarioAutenticavel : Funcionario, IAutenticavel
     {
-        public GerenteDeConta(string cpf) : base(cpf, 4000)
+        public string Senha { get; set; }
+
+        public FuncionarioAutenticavel(string cpf, double salario) : base(cpf, salario)
         {
         }
 
         public bool Autenticar(string senha)
         {
-            return true;
+            return Senha == senha;
         }
 
         public override void AumentarSalario()
         {
-            Salario *= 1.05;
+            throw new NotImplementedException();
         }
 
         public override double GetBonificacao()
         {
-            return Salario * 0.25;
+            throw new NotImplementedException();
         }
     }
 }
