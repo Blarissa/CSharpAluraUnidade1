@@ -10,6 +10,7 @@ namespace ByteBank.SistemaAgencia
     {
         public Cliente Titular { get; set; }
 
+        public static double TaxaOperacao { get; private set; }
         public static int TotalDeContasCriadas { get; private set; }
 
         private int _agencia;
@@ -28,7 +29,8 @@ namespace ByteBank.SistemaAgencia
 
                 _agencia = value;
             }
-            public int Numero { get; set; }
+        }
+        public int Numero { get; set; }
 
         private double _saldo = 100;
 
@@ -54,6 +56,8 @@ namespace ByteBank.SistemaAgencia
         {
             Agencia = agencia;
             Numero = numero;
+
+            TaxaOperacao = 30 / TotalDeContasCriadas;
 
             TotalDeContasCriadas++;
         }
