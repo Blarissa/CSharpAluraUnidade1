@@ -8,7 +8,7 @@ namespace ByteBank.Funcionarios
 {
     public class GerenteDeConta : Funcionario
     {
-        public GerenteDeConta(string cpf, double salario) : base(cpf, salario)
+        public GerenteDeConta(string cpf) : base(cpf, 4000)
         {
         }
 

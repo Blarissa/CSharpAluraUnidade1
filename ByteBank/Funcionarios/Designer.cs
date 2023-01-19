@@ -8,7 +8,7 @@ namespace ByteBank.Funcionarios
 {
     public class Designer : Funcionario
     {
-        public Designer(string cpf, double salario) : base(cpf, salario)
+        public Designer(string cpf) : base(cpf, 3000)
         {
         }
 
