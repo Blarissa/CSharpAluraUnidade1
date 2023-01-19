@@ -10,20 +10,39 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            Metodo();
+            /*
+            try
+            {
+                Metodo();
+            }
+            catch (Exception excecao)
+            {
+                Console.WriteLine(excecao.Message);
+                Console.WriteLine(excecao.StackTrace);
+            }*/
+
+            try
+            {
+                ContaCorrente conta = new ContaCorrente(5025, 52665);
+                conta.Depositar(50);
+                Console.WriteLine(conta.Saldo);
+                conta.Sacar(50);
+                Console.WriteLine(conta.Saldo);
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine("Erro no parâmetro: " + ex.ParamName);
+                Console.WriteLine("Ocorreu um erro do tipo ArgumentException.");
+                Console.WriteLine(ex.Message);
+            }
+
             Console.ReadLine();
         }
 
         private static void Metodo()
         {
-            try
-            {
-                TestaDivisao(2);
-            }catch(DivideByZeroException) {
-                Console.WriteLine("Ocorreu um erro! Não é possível dividir um número por 0!");
-            }
-
-        }
+            TestaDivisao(0);
+        }           
 
         private static void TestaDivisao(int divisor)
         {
@@ -33,6 +52,8 @@ namespace ByteBank.SistemaAgencia
 
         private static int Dividir(int numero, int divisor)
         {
+            ContaCorrente conta = null;
+
             return numero / divisor;
         }
     }

@@ -14,25 +14,10 @@ namespace ByteBank.SistemaAgencia
         public static int TotalDeContasCriadas { get; private set; }
 
         private int _agencia;
-        public int Agencia
-        {
-            get
-            {
-                return _agencia;
-            }
-            set
-            {
-                if (value <= 0)
-                {
-                    return;
-                }
+        public int Agencia { get; }
+        public int Numero { get; }
 
-                _agencia = value;
-            }
-        }
-        public int Numero { get; set; }
-
-        private double _saldo = 100;
+        private double _saldo;
 
         public double Saldo
         {
@@ -43,9 +28,7 @@ namespace ByteBank.SistemaAgencia
             set
             {
                 if (value < 0)
-                {
                     return;
-                }
 
                 _saldo = value;
             }
@@ -54,21 +37,27 @@ namespace ByteBank.SistemaAgencia
 
         public ContaCorrente(int agencia, int numero)
         {
-            Agencia = agencia;
+            if (agencia <= 0)
+            throw new ArgumentException("O argumento agencia deve ser maior que 0.", 
+                nameof(agencia));
+            
+            if (numero <= 0)            
+                throw new ArgumentException("O argumento numero deve ser maior que 0.", 
+                    nameof(numero));
+           
+            Agencia = agencia;            
             Numero = numero;
+            
+            TotalDeContasCriadas++;
 
             TaxaOperacao = 30 / TotalDeContasCriadas;
-
-            TotalDeContasCriadas++;
         }
 
 
         public bool Sacar(double valor)
         {
             if (_saldo < valor)
-            {
-                return false;
-            }
+                return false;            
 
             _saldo -= valor;
             return true;
@@ -79,13 +68,10 @@ namespace ByteBank.SistemaAgencia
             _saldo += valor;
         }
 
-
         public bool Transferir(double valor, ContaCorrente contaDestino)
         {
             if (_saldo < valor)
-            {
-                return false;
-            }
+                return false;      
 
             _saldo -= valor;
             contaDestino.Depositar(valor);
