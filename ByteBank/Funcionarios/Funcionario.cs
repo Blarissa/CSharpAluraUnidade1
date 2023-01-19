@@ -14,21 +14,14 @@ namespace ByteBank.Funcionarios
         public double Salario { get; set; }
         
         public Funcionario(string cpf, double salario) {
+            TotalDeFuncionarios++;
             Console.WriteLine("Criando FUNCIONARIO");
             CPF = cpf;
-            Salario = salario;
-            TotalDeFuncionarios++;
+            Salario = salario;           
         }
 
-        public virtual void AumentarSalario()
-        {
-            Console.WriteLine("Atenção, não esqueça de sobrescrever o método AumentarSalario");
-        }
+        public abstract void AumentarSalario();
 
-        public virtual double GetBonificacao()
-        {
-            Console.WriteLine("Atenção, não esqueça de sobrescrever o método GetBonificacao");
-            return 0;
-        }
+        public abstract double GetBonificacao();
     }
 }
