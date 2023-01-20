@@ -21,15 +21,26 @@ namespace CSharpCollections
             
             Imprimir(aulas);
 
-            
+            aulas.Reverse();
+            Imprimir(aulas);
+
+            aulas.RemoveAt(aulas.Count - 1);
+            Imprimir(aulas);
+
+            aulas.Add("Conclusão");
+            Imprimir(aulas);
+
+            aulas.Sort();
+            Imprimir(aulas);
 
             Console.ReadLine();
         }
 
         private static void Imprimir(List<string> aulas)
         {
-            foreach (var aula in aulas)
-                Console.WriteLine(aula);
+            //foreach (var aula in aulas)
+            //    Console.WriteLine(aula);
+            aulas.ForEach(aula => { Console.WriteLine(aula); });
             Console.WriteLine();
         }
     }
