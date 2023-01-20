@@ -14,32 +14,19 @@ namespace CSharpCollections
             string aulaModelando = "Modelando a Classe Aula.";
             string aulaSets = "Trabalhando com Conjuntos.";
 
-            string[] aulas = new string[]
+            List<string> aulas = new List<string>
             {
                 aulaIntro, aulaModelando, aulaSets
             };
             
             Imprimir(aulas);
 
-            Array.Reverse(aulas);
-            Imprimir(aulas);
-
-            Array.Resize(ref aulas, 2);
-            Imprimir(aulas);
-
-            Array.Resize(ref aulas, 3);
-            Imprimir(aulas);
-
-            aulas[aulas.Length - 1] = "Conclusão";
-            Imprimir(aulas);
-
-            Array.Sort(aulas);
-            Imprimir(aulas);
+            
 
             Console.ReadLine();
         }
 
-        private static void Imprimir(string[] aulas)
+        private static void Imprimir(List<string> aulas)
         {
             foreach (var aula in aulas)
                 Console.WriteLine(aula);
