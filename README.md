@@ -52,7 +52,7 @@
 - Segregação de Interfaces e Liskov
 
 # Unidade 02
-## HTTP
+## :heavy_check_mark: HTTP
 ### :heavy_check_mark: Entendendo a web por baixo dos panos
 - O que é HTTP? Ver primeiro vídeo
 - A web segura - HTTPS
@@ -63,13 +63,13 @@
 - Serviços na web com REST
 - HTTP2 - Por uma web mais eficiente
 
-## Artigo
+## :heavy_check_mark: Artigo
 - O que é uma API?
 
 ## C#
 ### Paralelismo no mundo real
 
-## Tutoriais 
+## :heavy_check_mark: Tutoriais 
 - Tutorial: Fazer solicitações HTTP em um aplicativo de console .NET usando C # | Microsoft Docs
 - Como serializar e desteerializar JSON usando C# – .NET | Microsoft Docs
 - C# JSON - working with JSON data in C#
