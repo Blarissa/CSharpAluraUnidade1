@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpCollections", "CSharp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListaSomenteLeitura", "ListaSomenteLeitura\ListaSomenteLeitura.csproj", "{20A8B88F-8AA7-4F37-AB7E-A5A76242BB5C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoderDosSets", "PoderDosSets\PoderDosSets.csproj", "{120B2811-54C3-4373-9A4C-46CDAE5EDA18}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{20A8B88F-8AA7-4F37-AB7E-A5A76242BB5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20A8B88F-8AA7-4F37-AB7E-A5A76242BB5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20A8B88F-8AA7-4F37-AB7E-A5A76242BB5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{120B2811-54C3-4373-9A4C-46CDAE5EDA18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{120B2811-54C3-4373-9A4C-46CDAE5EDA18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{120B2811-54C3-4373-9A4C-46CDAE5EDA18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{120B2811-54C3-4373-9A4C-46CDAE5EDA18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
