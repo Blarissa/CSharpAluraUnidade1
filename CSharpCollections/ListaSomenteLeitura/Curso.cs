@@ -64,8 +64,6 @@ namespace ListaSomenteLeitura
         public override string ToString()
         {
             return $"Curso: {nome}, Tempo: {TempoTotal}, Aulas: {string.Join(",", aulas)}";
-        }
-
-        
+        }        
     }
 }

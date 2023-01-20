@@ -71,5 +71,10 @@ namespace ListaSomenteLeitura
         {
             alunos.Add(aluno);
         }
+
+        public bool EstaMatriculado(Aluno aluno)
+        {
+            return alunos.Contains(aluno);
+        }
     }
 }

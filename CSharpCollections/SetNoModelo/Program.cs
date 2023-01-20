@@ -33,6 +33,15 @@ namespace SetNoModelo
             {
                 Console.WriteLine(aluno);
             }
+            Console.WriteLine();
+
+            Console.WriteLine($"O aluno {a1.Nome} está matriculado?");
+            Console.WriteLine(csharpColecoes.EstaMatriculado(a1));
+
+            Aluno a4 = new Aluno("James Moriarty", 321456);
+            Console.WriteLine("Moriarty está matriculado? " + csharpColecoes.EstaMatriculado(a4));
+
+            
 
             Console.ReadLine();
         }
