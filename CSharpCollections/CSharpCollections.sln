@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListaSomenteLeitura", "List
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoderDosSets", "PoderDosSets\PoderDosSets.csproj", "{120B2811-54C3-4373-9A4C-46CDAE5EDA18}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetNoModelo", "SetNoModelo\SetNoModelo.csproj", "{C813E6B8-4369-4531-854C-504C25AF7403}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{120B2811-54C3-4373-9A4C-46CDAE5EDA18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{120B2811-54C3-4373-9A4C-46CDAE5EDA18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{120B2811-54C3-4373-9A4C-46CDAE5EDA18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C813E6B8-4369-4531-854C-504C25AF7403}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C813E6B8-4369-4531-854C-504C25AF7403}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C813E6B8-4369-4531-854C-504C25AF7403}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C813E6B8-4369-4531-854C-504C25AF7403}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

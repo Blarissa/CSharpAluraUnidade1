@@ -1,4 +1,5 @@
 ﻿using CSharpCollections;
+using SetNoModelo;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -10,7 +11,7 @@ namespace ListaSomenteLeitura
 {
     public class Curso
     {
-        /**private ISet<Aluno> alunos = new HashSet<Aluno>();
+        private ISet<Aluno> alunos = new HashSet<Aluno>();
 
         public IList<Aluno> Alunos
         {
@@ -18,7 +19,7 @@ namespace ListaSomenteLeitura
             {
                 return new ReadOnlyCollection<Aluno>(alunos.ToList());
             }
-        }**/
+        }
         private IList<Aula> aulas;
 
         public IList<Aula> Aulas
@@ -66,6 +67,9 @@ namespace ListaSomenteLeitura
             return $"Curso: {nome}, Tempo: {TempoTotal}, Aulas: {string.Join(",", aulas)}";
         }
 
-        
+        public void Matricula(Aluno aluno)
+        {
+            alunos.Add(aluno);
+        }
     }
 }
