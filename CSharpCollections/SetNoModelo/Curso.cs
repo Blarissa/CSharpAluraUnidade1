@@ -1,6 +1,7 @@
 ﻿using CSharpCollections;
 using SetNoModelo;
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -11,6 +12,8 @@ namespace ListaSomenteLeitura
 {
     public class Curso
     {
+        private IDictionary<int, Aluno> dicionarioAlunos = new Dictionary<int, Aluno>();
+
         private ISet<Aluno> alunos = new HashSet<Aluno>();
 
         public IList<Aluno> Alunos
@@ -69,12 +72,22 @@ namespace ListaSomenteLeitura
 
         public void Matricula(Aluno aluno)
         {
-            alunos.Add(aluno);
+            this.alunos.Add(aluno);
+            this.dicionarioAlunos.Add(aluno.NumeroMatricula, aluno);
         }
 
         public bool EstaMatriculado(Aluno aluno)
         {
             return alunos.Contains(aluno);
+        }
+
+        public Aluno BuscaMatriculado(int numeroMatricula)
+        {
+            Aluno aluno = null;
+            
+            this.dicionarioAlunos.TryGetValue(numeroMatricula, out aluno);
+
+            return aluno;
         }
     }
 }
