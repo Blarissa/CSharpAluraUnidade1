@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharpCollections
 {
-    public class Aula
+    public class Aula : IComparable
     {
         private string titulo;
         private int tempo;
@@ -19,5 +19,16 @@ namespace CSharpCollections
 
         public string Titulo { get => titulo; set => titulo = value; }
         public int Tempo { get => tempo; set => tempo = value; }
+
+        public override string ToString()
+        {
+            return $"título: {titulo}, tempo: {tempo} minutos";
+        }
+
+        public int CompareTo(object obj)
+        {
+            Aula that = obj as Aula;
+            return this.titulo.CompareTo(that.titulo);
+        }
     }
 }

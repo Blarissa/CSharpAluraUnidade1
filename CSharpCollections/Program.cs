@@ -10,37 +10,35 @@ namespace CSharpCollections
     {
         static void Main(string[] args)
         {
-            string aulaIntro = "Introdução às Coleções.";
-            string aulaModelando = "Modelando a Classe Aula.";
-            string aulaSets = "Trabalhando com Conjuntos.";
+            var aulaIntro = new Aula("Introdução às Coleções.", 20);
+            var aulaModelando = new Aula("Modelando a Classe Aula.", 18);
+            var aulaSets = new Aula("Trabalhando com Conjuntos.", 16);
 
-            List<string> aulas = new List<string>
-            {
-                aulaIntro, aulaModelando, aulaSets
-            };
-            
-            Imprimir(aulas);
+            List<Aula> aulas = new List<Aula>();
+            aulas.Add(aulaIntro);
+            aulas.Add(aulaModelando);
+            aulas.Add(aulaSets);
 
-            aulas.Reverse();
-            Imprimir(aulas);
-
-            aulas.RemoveAt(aulas.Count - 1);
-            Imprimir(aulas);
-
-            aulas.Add("Conclusão");
             Imprimir(aulas);
 
             aulas.Sort();
             Imprimir(aulas);
 
+            aulas.Sort((este, outro) => este.Tempo.CompareTo(outro.Tempo));
+            Imprimir(aulas);
+
             Console.ReadLine();
         }
 
-        private static void Imprimir(List<string> aulas)
+        private static void Imprimir(List<Aula> aulas)
         {
-            //foreach (var aula in aulas)
-            //    Console.WriteLine(aula);
-            aulas.ForEach(aula => { Console.WriteLine(aula); });
+            Console.Clear();
+
+            foreach (var aula in aulas)
+            {
+                Console.WriteLine(aula);
+            }
+
             Console.WriteLine();
         }
     }

@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpCollections", "CSharpCollections.csproj", "{96D71D43-DB67-481D-9526-859322C1F60B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListaSomenteLeitura", "ListaSomenteLeitura\ListaSomenteLeitura.csproj", "{20A8B88F-8AA7-4F37-AB7E-A5A76242BB5C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{96D71D43-DB67-481D-9526-859322C1F60B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96D71D43-DB67-481D-9526-859322C1F60B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96D71D43-DB67-481D-9526-859322C1F60B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20A8B88F-8AA7-4F37-AB7E-A5A76242BB5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20A8B88F-8AA7-4F37-AB7E-A5A76242BB5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20A8B88F-8AA7-4F37-AB7E-A5A76242BB5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20A8B88F-8AA7-4F37-AB7E-A5A76242BB5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
