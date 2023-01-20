@@ -12,7 +12,7 @@
 - Construtores e protected
 - Mais herança e herança múltipla
 - Interfaces
-## Entendendo exceções
+## :heavy_check_mark: Entendendo exceções
 - Primeiros passos com exceções
 - Tratamento de exceções
 - ArgumentException ParamName e nameof
