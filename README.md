@@ -1,4 +1,4 @@
-# CursoCSharpAlura
+# Curso C# 
 ## :heavy_check_mark: Primeiros passos
 - História e ecossistema da linguagem 
 - Nosso primeiro programa e o Visual Studio
@@ -20,5 +20,31 @@
 - StackTrace e InnerException
 - Finally e using
 ## Bibliotecas DDLs, documentação e usando o Nuget
+
 ## Array e tipos genéricos
+
 ## List, lambda, linq
+
+# C# Collections 
+## Listas, arrays, listas ligadas, dicionários e conjuntos
+- Começando com Arrays Ver primeiro vídeo
+- Lista, a Coleção Flexível
+- O Poder dos Sets
+- Dicionários, Trabalhando com Chave e Valor
+- Lista Ligada, Pilha e Fila
+- Qual Coleção Usar
+
+## Coleções ordenadas, arrays multidimensionais e LINQ
+- Coleções Ordenadas Ver primeiro vídeo
+- Arrays Multidimensionais
+- Consultando com LINQ
+- Mais Operadores LINQ
+- Convertendo e Enumerando Coleções
+
+# SOLID com C#
+## Princípios da programação orientada a objetos
+- Qualidade de software Ver primeiro vídeo
+- Responsabilidade única
+- Inversão de dependências
+- Princípio do Aberto/Fechado
+- Segregação de Interfaces e Liskov
