@@ -41,7 +41,22 @@ namespace SetNoModelo
             Aluno a4 = new Aluno("James Moriarty", 321456);
             Console.WriteLine("Moriarty está matriculado? " + csharpColecoes.EstaMatriculado(a4));
 
+            Console.Clear();
+
+            Aluno alunoBuscado = csharpColecoes.BuscaMatriculado(321456);
+            Console.WriteLine("Aluno buscado: " + alunoBuscado);
+
+            Console.WriteLine("Aluno buscado: " + csharpColecoes.BuscaMatriculado(11111));
+            Console.WriteLine("Quem é o aluno 5618?");
+            Console.WriteLine(csharpColecoes.BuscaMatriculado(5618));
+
             
+            Aluno outroAluno = new Aluno("Martha Hudson", 321456);
+            
+            csharpColecoes.SubstituiAluno(outroAluno);
+            //pergunta: "Quem é o Aluno 5617 agora?"
+            Console.WriteLine("Quem é o Aluno 321456 agora?");
+            Console.WriteLine(csharpColecoes.BuscaMatriculado(321456));
 
             Console.ReadLine();
         }

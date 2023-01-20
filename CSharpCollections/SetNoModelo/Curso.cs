@@ -1,6 +1,7 @@
 ﻿using CSharpCollections;
 using SetNoModelo;
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -11,7 +12,10 @@ namespace ListaSomenteLeitura
 {
     public class Curso
     {
-        private ISet<Aluno> alunos = new HashSet<Aluno>();
+        private IDictionary<int, Aluno> dicionarioAlunos =
+            new Dictionary<int, Aluno>();
+
+        ISet<Aluno> alunos = new HashSet<Aluno>();
 
         public IList<Aluno> Alunos
         {
@@ -20,6 +24,7 @@ namespace ListaSomenteLeitura
                 return new ReadOnlyCollection<Aluno>(alunos.ToList());
             }
         }
+
         private IList<Aula> aulas;
 
         public IList<Aula> Aulas
@@ -27,7 +32,20 @@ namespace ListaSomenteLeitura
             get { return new ReadOnlyCollection<Aula>(aulas); }
         }
 
+        public void Adiciona(Aula aula)
+        {
+            this.aulas.Add(aula);
+        }
+
         private string nome;
+        private string instrutor;
+
+        public Curso(string nome, string instrutor)
+        {
+            this.nome = nome;
+            this.instrutor = instrutor;
+            this.aulas = new List<Aula>();
+        }
 
         public string Nome
         {
@@ -35,7 +53,11 @@ namespace ListaSomenteLeitura
             set { nome = value; }
         }
 
-        private string instrutor;
+        public void Matricula(Aluno aluno)
+        {
+            this.alunos.Add(aluno);
+            this.dicionarioAlunos.Add(aluno.NumeroMatricula, aluno);
+        }
 
         public string Instrutor
         {
@@ -43,23 +65,11 @@ namespace ListaSomenteLeitura
             set { instrutor = value; }
         }
 
-        public int TempoTotal {
-            get
-            {
+        public int TempoTotal
+        {
+            get { 
                 return aulas.Sum(aula => aula.Tempo);
             }
-        }
-
-        public Curso(string nome, string instrutor) 
-        { 
-            this.nome = nome;
-            this.instrutor = instrutor;
-            this.aulas = new List<Aula>();    
-        }
-
-        public void Adiciona(Aula aula)
-        {
-            this.aulas.Add(aula);
         }
 
         public override string ToString()
@@ -67,14 +77,21 @@ namespace ListaSomenteLeitura
             return $"Curso: {nome}, Tempo: {TempoTotal}, Aulas: {string.Join(",", aulas)}";
         }
 
-        public void Matricula(Aluno aluno)
-        {
-            alunos.Add(aluno);
-        }
-
         public bool EstaMatriculado(Aluno aluno)
         {
             return alunos.Contains(aluno);
+        }
+
+        public Aluno BuscaMatriculado(int numeroMatricula)
+        {
+            Aluno aluno = null;
+            this.dicionarioAlunos.TryGetValue(numeroMatricula, out aluno);
+            return aluno;
+        }
+
+        public void SubstituiAluno(Aluno aluno)
+        {
+            this.dicionarioAlunos[aluno.NumeroMatricula] = aluno;
         }
     }
 }
