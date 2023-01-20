@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ByteBank;
 
 namespace ByteBank.SistemaAgencia
 {
@@ -17,7 +18,7 @@ namespace ByteBank.SistemaAgencia
         public int Agencia { get; }
         public int Numero { get; }
 
-        private double _saldo;
+        private double _saldo = 100;
 
         public double Saldo
         {
@@ -54,13 +55,16 @@ namespace ByteBank.SistemaAgencia
         }
 
 
-        public bool Sacar(double valor)
+        public void Sacar(double valor)
         {
-            if (_saldo < valor)
-                return false;            
+            if (valor < 0)
+                throw new ArgumentException("Valor inválido para o saque.", nameof(valor));
 
+            if (_saldo < valor)
+                throw new SaldoInsulficienteException(Saldo, valor);            
+                
             _saldo -= valor;
-            return true;
+
         }
 
         public void Depositar(double valor)
@@ -68,14 +72,13 @@ namespace ByteBank.SistemaAgencia
             _saldo += valor;
         }
 
-        public bool Transferir(double valor, ContaCorrente contaDestino)
+        public void Transferir(double valor, ContaCorrente contaDestino)
         {
             if (_saldo < valor)
-                return false;      
+                throw new ArgumentException("Valor inválido para a tranferência.", nameof(valor));
 
-            _saldo -= valor;
-            contaDestino.Depositar(valor);
-            return true;
+            Sacar(valor);
+            contaDestino.Depositar(valor);            
         }
     }    
 }
