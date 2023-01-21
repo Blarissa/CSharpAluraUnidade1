@@ -6,9 +6,9 @@
     - [:heavy_check_mark: Entendendo exceções](#heavy_check_mark-entendendo-excecoes)
     - [Array e tipos genéricos](#array-e-tipos-genericos)
     - [List, lambda, linq](#list-lambda-linq)
-  - [C# Collections](#c-collections)
+  - [:heavy_check_mark: C# Collections](#heavy_check_mark-c-collections)
     - [:heavy_check_mark: Listas, arrays, listas ligadas, dicionários e conjuntos](#heavy_check_mark-listas-arrays-listas-ligadas-dicionarios-e-conjuntos)
-    - [Coleções ordenadas, arrays multidimensionais e LINQ](#colecoes-ordenadas-arrays-multidimensionais-e-linq)
+    - [:heavy_check_mark: Coleções ordenadas, arrays multidimensionais e LINQ](#heavy_check_mark-colecoes-ordenadas-arrays-multidimensionais-e-linq)
   - [SOLID com C#](#solid-com-c)
     - [Princípios da programação orientada a objetos](#principios-da-programacao-orientada-a-objetos)
 - [Unidade 02](#unidade-02)
@@ -76,7 +76,7 @@
 - OrderBy e expressões Lambda
 - Linq e operador Where
 
-## C# Collections 
+## :heavy_check_mark: C# Collections 
 
 ### :heavy_check_mark: Listas, arrays, listas ligadas, dicionários e conjuntos
 - Começando com Arrays 
@@ -86,7 +86,7 @@
 - Lista Ligada, Pilha e Fila
 - Qual Coleção Usar
 
-### Coleções ordenadas, arrays multidimensionais e LINQ
+### :heavy_check_mark: Coleções ordenadas, arrays multidimensionais e LINQ
 - Coleções Ordenadas 
 - Arrays Multidimensionais
 - Consultando com LINQ
