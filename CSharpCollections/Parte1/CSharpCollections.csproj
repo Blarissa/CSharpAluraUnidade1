@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{20A8B88F-8AA7-4F37-AB7E-A5A76242BB5C}</ProjectGuid>
+    <ProjectGuid>{96D71D43-DB67-481D-9526-859322C1F60B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ListaSomenteLeitura</RootNamespace>
-    <AssemblyName>ListaSomenteLeitura</AssemblyName>
+    <RootNamespace>CSharpCollections</RootNamespace>
+    <AssemblyName>CSharpCollections</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,18 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Curso.cs" />
+    <Compile Include="Aula.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CSharpCollections1.csproj">
-      <Project>{96D71D43-DB67-481D-9526-859322C1F60B}</Project>
-      <Name>CSharpCollections</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

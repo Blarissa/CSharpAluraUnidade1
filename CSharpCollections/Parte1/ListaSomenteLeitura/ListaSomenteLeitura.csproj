@@ -51,7 +51,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CSharpCollections1.csproj">
+    <ProjectReference Include="..\CSharpCollections.csproj">
       <Project>{96D71D43-DB67-481D-9526-859322C1F60B}</Project>
       <Name>CSharpCollections</Name>
     </ProjectReference>

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpCollections1", "CSharpCollections1.csproj", "{96D71D43-DB67-481D-9526-859322C1F60B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpCollections", "CSharpCollections.csproj", "{96D71D43-DB67-481D-9526-859322C1F60B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListaSomenteLeitura", "ListaSomenteLeitura\ListaSomenteLeitura.csproj", "{20A8B88F-8AA7-4F37-AB7E-A5A76242BB5C}"
 EndProject
@@ -16,6 +16,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stack", "Stack\Stack.csproj", "{10E384E6-8D6F-463A-9D88-AA1F1C25E38B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queue", "Queue\Queue.csproj", "{00D51D08-3EC2-464F-8C18-14ACFF3CFF62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A1IconFromByteArray", "..\..\..\..\..\Downloads\csharp-collections-d3a1d13f28ab6e708613eb97f05211a1571c59c8\csharp-collections-d3a1d13f28ab6e708613eb97f05211a1571c59c8\A1IconFromBytes\A1IconFromByteArray.csproj", "{DEC34FD6-227A-45EF-8C9B-1CD4F6310431}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A2ListasDePixels", "..\..\..\..\..\Downloads\csharp-collections-d3a1d13f28ab6e708613eb97f05211a1571c59c8\csharp-collections-d3a1d13f28ab6e708613eb97f05211a1571c59c8\A2ListasDePixels\A2ListasDePixels.csproj", "{AFCC5C7B-6FAF-4C33-A9B3-16C0AD3F24C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,14 @@ Global
 		{00D51D08-3EC2-464F-8C18-14ACFF3CFF62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00D51D08-3EC2-464F-8C18-14ACFF3CFF62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00D51D08-3EC2-464F-8C18-14ACFF3CFF62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEC34FD6-227A-45EF-8C9B-1CD4F6310431}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEC34FD6-227A-45EF-8C9B-1CD4F6310431}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEC34FD6-227A-45EF-8C9B-1CD4F6310431}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEC34FD6-227A-45EF-8C9B-1CD4F6310431}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFCC5C7B-6FAF-4C33-A9B3-16C0AD3F24C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFCC5C7B-6FAF-4C33-A9B3-16C0AD3F24C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFCC5C7B-6FAF-4C33-A9B3-16C0AD3F24C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFCC5C7B-6FAF-4C33-A9B3-16C0AD3F24C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
