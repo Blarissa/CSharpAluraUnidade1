@@ -36,7 +36,7 @@ namespace SortedList
             sorted.Add("MH", new Aluno("Mycroft Holmes", 123456));
             sorted.Add("JM", new Aluno("James Moriarty", 321456));
 
-            Console.WriteLine("Imprimindo SortedList");
+            Console.WriteLine("Imprimindo SortedList\n");
             Imprimir(sorted);
 
             Console.ReadLine();

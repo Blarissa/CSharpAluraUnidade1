@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpCollections2", "CShar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortedList", "SortedList\SortedList.csproj", "{F12C6B1F-3FD1-4142-9D76-ED25A42CF1E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortedDictionary", "..\SortedDictionary\SortedDictionary.csproj", "{09D233E6-B647-4AAE-ACE5-33B0B748E250}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F12C6B1F-3FD1-4142-9D76-ED25A42CF1E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F12C6B1F-3FD1-4142-9D76-ED25A42CF1E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F12C6B1F-3FD1-4142-9D76-ED25A42CF1E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09D233E6-B647-4AAE-ACE5-33B0B748E250}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09D233E6-B647-4AAE-ACE5-33B0B748E250}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09D233E6-B647-4AAE-ACE5-33B0B748E250}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09D233E6-B647-4AAE-ACE5-33B0B748E250}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
