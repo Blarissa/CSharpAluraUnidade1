@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortedDictionary", "..\Sort
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortedSet", "..\SortedSet\SortedSet.csproj", "{B6CE999A-BA58-4069-972C-CFA23047589E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArraysMultidimensionais", "..\ArraysMultidimensionais\ArraysMultidimensionais.csproj", "{02C8FBB6-36FB-4F7A-A8FB-006965039A23}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{B6CE999A-BA58-4069-972C-CFA23047589E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6CE999A-BA58-4069-972C-CFA23047589E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6CE999A-BA58-4069-972C-CFA23047589E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02C8FBB6-36FB-4F7A-A8FB-006965039A23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02C8FBB6-36FB-4F7A-A8FB-006965039A23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02C8FBB6-36FB-4F7A-A8FB-006965039A23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02C8FBB6-36FB-4F7A-A8FB-006965039A23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
