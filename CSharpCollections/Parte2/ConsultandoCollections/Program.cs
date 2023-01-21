@@ -26,19 +26,20 @@ namespace ConsultandoCollections
                 new Mes("Dezembro", 31)
             };
 
-            Imprimir(meses);
+            IEnumerable<String> consulta = meses.Where(m => m.Dias == 31).OrderBy(m => m.Nome).Select(m => m.Nome.ToUpper());
+
+            Imprimir(consulta);
 
             Console.ReadLine();
 
         }
 
-        private static void Imprimir(List<Mes> meses)
+        private static void Imprimir(IEnumerable<String> consulta)
         {
-            meses.Sort();
-            meses.ForEach(mes => { 
-                if(mes.Dias == 31)
-                    Console.WriteLine(mes.Nome.ToUpper());
-            });
+            foreach (var item in consulta)            
+                Console.WriteLine(item);
+            
+            Console.WriteLine();
         }
     }
 }

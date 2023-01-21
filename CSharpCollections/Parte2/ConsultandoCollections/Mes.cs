@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsultandoCollections
 {
-    internal class Mes : IComparable
+    internal class Mes 
     {
         public Mes(string nome, int dias)
         {
@@ -15,13 +15,7 @@ namespace ConsultandoCollections
         }
 
         public string Nome { get; private set; }
-        public int Dias { get; private set; }
-
-        public int CompareTo(object obj)
-        {
-            Mes outro = obj as Mes;
-            return this.Nome.CompareTo(outro.Nome);
-        }
+        public int Dias { get; private set; }        
 
         public override string ToString()
         {
