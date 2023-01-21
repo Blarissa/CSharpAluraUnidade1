@@ -52,9 +52,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CSharpCollections.csproj">
+    <ProjectReference Include="..\CSharpCollections1.csproj">
       <Project>{96D71D43-DB67-481D-9526-859322C1F60B}</Project>
-      <Name>CSharpCollections</Name>
+      <Name>CSharpCollections1</Name>
     </ProjectReference>
     <ProjectReference Include="..\ListaSomenteLeitura\ListaSomenteLeitura.csproj">
       <Project>{20A8B88F-8AA7-4F37-AB7E-A5A76242BB5C}</Project>
