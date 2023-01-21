@@ -1,3 +1,34 @@
+<!--TOC-->
+- [Unidade 01](#unidade-01)
+  - [Curso C#](#curso-c)
+    - [:heavy_check_mark: Primeiros passos](#heavy_check_mark-primeiros-passos)
+    - [:heavy_check_mark: Entendendo herança e interface](#heavy_check_mark-entendendo-heranca-e-interface)
+    - [:heavy_check_mark: Entendendo exceções](#heavy_check_mark-entendendo-excecoes)
+    - [Array e tipos genéricos](#array-e-tipos-genericos)
+    - [List, lambda, linq](#list-lambda-linq)
+  - [C# Collections](#c-collections)
+    - [:heavy_check_mark: Listas, arrays, listas ligadas, dicionários e conjuntos](#heavy_check_mark-listas-arrays-listas-ligadas-dicionarios-e-conjuntos)
+    - [Coleções ordenadas, arrays multidimensionais e LINQ](#colecoes-ordenadas-arrays-multidimensionais-e-linq)
+  - [SOLID com C#](#solid-com-c)
+    - [Princípios da programação orientada a objetos](#principios-da-programacao-orientada-a-objetos)
+- [Unidade 02](#unidade-02)
+  - [:heavy_check_mark: HTTP](#heavy_check_mark-http)
+    - [:heavy_check_mark: Entendendo a web por baixo dos panos](#heavy_check_mark-entendendo-a-web-por-baixo-dos-panos)
+  - [:heavy_check_mark: Artigo](#heavy_check_mark-artigo)
+  - [C#](#c)
+    - [Paralelismo no mundo real](#paralelismo-no-mundo-real)
+  - [:heavy_check_mark: Tutoriais](#heavy_check_mark-tutoriais)
+- [Unidade 03](#unidade-03)
+  - [Entity Framework Core](#entity-framework-core)
+    - [Banco de dados de forma eficiente](#banco-de-dados-de-forma-eficiente)
+    - [Mapeando um banco pré-existente](#mapeando-um-banco-pre-existente)
+  - [.NET 5 e EF Core](#.net-5-e-ef-core)
+    - [Relacionando entidades](#relacionando-entidades)
+  - [Entity LinQ](#entity-linq)
+    - [Crie queries poderosas em C#](#crie-queries-poderosas-em-c)
+    - [Store Procedures e consultas com o LinQPad](#store-procedures-e-consultas-com-o-linqpad)
+<!--/TOC-->
+
 # Unidade 01
 ## Curso C# 
 ### :heavy_check_mark: Primeiros passos
@@ -7,12 +38,14 @@
 - Variáveis de texto
 - Controle de fluxo com IF
 - Controle de fluxo com laços de repetição
+
 ### :heavy_check_mark: Entendendo herança e interface
 - Conhecendo o problema do cliente
 - Herança
 - Construtores e protected
 - Mais herança e herança múltipla
 - Interfaces
+
 ### :heavy_check_mark: Entendendo exceções
 - Primeiros passos com exceções
 - Tratamento de exceções
@@ -21,15 +54,32 @@
 - StackTrace e InnerException
 - Finally e using
 
-### Bibliotecas DDLs, documentação e usando o Nuget
+ Bibliotecas DDLs, documentação e usando o Nuget
+- Projeto de biblioteca Ver primeiro vídeo
+- Modificadores de acesso em bibliotecas
+- Referencia de DLL
+- Documentando
+- NuGet
 
 ### Array e tipos genéricos
+- Conhecendo Array
+- Criando nossa Lista
+- Criando o método Remover
+- Indexadores e argumentos params
+- Começando com genéricos
 
 ### List, lambda, linq
+- ListT e métodos de extensão 
+- Método de extensão genérico
+- Usando VAR e método Sort
+- IComparable e IComparer
+- OrderBy e expressões Lambda
+- Linq e operador Where
 
 ## C# Collections 
-### Listas, arrays, listas ligadas, dicionários e conjuntos
-- Começando com Arrays Ver primeiro vídeo
+
+### :heavy_check_mark: Listas, arrays, listas ligadas, dicionários e conjuntos
+- Começando com Arrays 
 - Lista, a Coleção Flexível
 - O Poder dos Sets
 - Dicionários, Trabalhando com Chave e Valor
@@ -37,7 +87,7 @@
 - Qual Coleção Usar
 
 ### Coleções ordenadas, arrays multidimensionais e LINQ
-- Coleções Ordenadas Ver primeiro vídeo
+- Coleções Ordenadas 
 - Arrays Multidimensionais
 - Consultando com LINQ
 - Mais Operadores LINQ
@@ -45,7 +95,7 @@
 
 ## SOLID com C#
 ### Princípios da programação orientada a objetos
-- Qualidade de software Ver primeiro vídeo
+- Qualidade de software
 - Responsabilidade única
 - Inversão de dependências
 - Princípio do Aberto/Fechado
@@ -54,7 +104,7 @@
 # Unidade 02
 ## :heavy_check_mark: HTTP
 ### :heavy_check_mark: Entendendo a web por baixo dos panos
-- O que é HTTP? Ver primeiro vídeo
+- O que é HTTP? 
 - A web segura - HTTPS
 - Endereços sob seu domínio
 - O cliente pede e o servidor responde
@@ -68,6 +118,11 @@
 
 ## C#
 ### Paralelismo no mundo real
+- Usando Threads
+- Usando Tasks
+- Usando o AsyncAwait do C#
+- Padrões de notificação de progresso de tarefas
+-Criando tarefas canceláveis
 
 ## :heavy_check_mark: Tutoriais 
 - Tutorial: Fazer solicitações HTTP em um aplicativo de console .NET usando C # | Microsoft Docs
@@ -75,13 +130,48 @@
 - C# JSON - working with JSON data in C#
 
 # Unidade 03
-## Entity Framework Core
-### Banco de dados de forma eficiente
-### Mapeando um banco pré-existente
 
-## .NET 5 e EF Core: 
+## Entity Framework Core 
+### Banco de dados de forma eficiente
+- Introdução ao Entity Framework Core 
+- Manipulando objetos
+- Como o Entity monta o SQL?
+- Sincronizando o banco de dados com o modelo de classes
+- Relacionamentos Um para Muitos no Entity
+- Relacionamentos Muitos para Muitos no Entity
+- Relacionamentos Um para Um no Entity
+- Recuperando objetos relacionados
+
+### Mapeando um banco pré-existente
+- Concluindo o mapeamento da tabelas de atores 
+- Classificação indicativa de filmes
+- Lidando com enumerados
+- Mapeando herança
+- Assumindo o controle da geração do SQL
+- Stored Procedures
+
+## .NET 5 e EF Core 
 ### Relacionando entidades
+- Incrementando o projeto 
+- O relacionamento 1:1
+- O relacionamento 1:n
+- O relacionamento n:n
+- Executando consultas
 
 ## Entity LinQ  
 ### Crie queries poderosas em C#
+- Linq to Objects 
+- Linq to XML
+- Linq to Entities
+- Associando e Filtrando Entidades do Modelo
+- Ordenando Consultas
+- Contando e Totalizando Valores
+- Máximo, Mínimo, Média e Funções Customizadas
+
 ### Store Procedures e consultas com o LinQPad
+- Aprenda a criar relatórios com paginação 
+- Aplique Análise de Afinidade para sugerir compras de produtos
+- Entenda execução adiada e execução imediata nas consultas LINQ
+- Aproveite recursos de programação paralela com Parallel LINQ
+- Integre resultados de stored procedures em consultas LINQ
+- Estude, analise e brinque com consultas através do LinqPad
