@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsultandoCollections
 {
-    internal class Mes 
+    public class Mes 
     {
         public Mes(string nome, int dias)
         {
