@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortedSet", "..\SortedSet\S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArraysMultidimensionais", "..\ArraysMultidimensionais\ArraysMultidimensionais.csproj", "{02C8FBB6-36FB-4F7A-A8FB-006965039A23}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JaggedArrays", "..\JaggedArrays\JaggedArrays.csproj", "{FE796504-CDB3-4CE7-A705-283459FBC065}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{02C8FBB6-36FB-4F7A-A8FB-006965039A23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02C8FBB6-36FB-4F7A-A8FB-006965039A23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02C8FBB6-36FB-4F7A-A8FB-006965039A23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE796504-CDB3-4CE7-A705-283459FBC065}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE796504-CDB3-4CE7-A705-283459FBC065}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE796504-CDB3-4CE7-A705-283459FBC065}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE796504-CDB3-4CE7-A705-283459FBC065}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
