@@ -22,19 +22,15 @@ namespace Alura.Loja.Testes.ConsoleApp
                 loggerFactory.AddProvider(SqlLoggerProvider.Create());
 
                 var produtos = contexto.Produtos.ToList();
+                
+                ExibeEntries(contexto.ChangeTracker.Entries());
+
+
+                /*
                 foreach (var p in produtos)
                 {
                     Console.WriteLine(p);
                 }
-
-                Console.WriteLine("=================");
-                foreach (var e in contexto.ChangeTracker.Entries())
-                {
-                    Console.WriteLine(e);
-                }
-
-                //var p1 = produtos.Last();
-                //p1.Nome = "007 - O Espiao Que Me Amava";
 
                 var novoProduto = new Produto()
                 {
@@ -44,17 +40,30 @@ namespace Alura.Loja.Testes.ConsoleApp
                 };
 
                 contexto.Produtos.Add(novoProduto);
+                */
+                var novoProduto = new Produto()
+                {
+                    Nome = "Sabão em pó",
+                    Categoria = "Limpeza",
+                    Preco = 5.99
+                };
+
+                contexto.Produtos.Add(novoProduto);
+
+                contexto.Produtos.Remove(novoProduto);
+
                 ExibeEntries(contexto.ChangeTracker.Entries());
 
                 contexto.SaveChanges();
 
-                //Console.WriteLine("=================");
-                //produtos = contexto.Produtos.ToList();
-                //foreach (var p in produtos)
-                //{
-                //    Console.WriteLine(p);
-                //}
+                ExibeEntries(contexto.ChangeTracker.Entries());
+
+                var entry = contexto.Entry(novoProduto);
+                Console.WriteLine("\n\n" + entry.Entity.ToString() + " - " + entry.State);
+
             }
+
+
 
             Console.ReadLine();
         }
@@ -64,7 +73,7 @@ namespace Alura.Loja.Testes.ConsoleApp
             Console.WriteLine("=================");
             foreach (var e in entries)
             {
-                Console.WriteLine($"{e.Entity.ToString()} - {e.State}");
+                Console.WriteLine($"{e.Entity.ToString()} - {e.State}\n");
             }
         }
     }
