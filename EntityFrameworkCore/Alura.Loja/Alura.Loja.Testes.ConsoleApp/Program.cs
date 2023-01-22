@@ -10,16 +10,18 @@ namespace Alura.Loja.Testes.ConsoleApp
     {
         static void Main(string[] args)
         {
-            //GravarUsandoAdoNet();
-            //GravarUsandoEntity();
-            //RecuperarProdutos();
-            //ExcluirProdutos();
-            //RecuperarProdutos();
-            AtualizarProduto();
+            using (var contexto = new LojaContext())
+            {
+                var produtos = contexto.Produtos.ToList();
 
+                produtos.ForEach( p => {
+                    Console.WriteLine(p);
+                });
+            }
+            
             Console.ReadLine();
         }
-
+        /*
         private static void AtualizarProduto()
         {
             // inclui um produto
@@ -97,6 +99,6 @@ namespace Alura.Loja.Testes.ConsoleApp
             {
                 repo.Adicionar(p);
             }
-        }
+        }*/
     }
 }
