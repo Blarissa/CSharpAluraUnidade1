@@ -9,11 +9,10 @@
 
         public override string ToString()
         {
-            return $"-----------Produto-----------\n" +
+            return $"Produto N° {this.Id}\n" +
                 $"Nome: {this.Nome}\n" +
                 $"Categoria: {this.Categoria}\n" +
-                $"Preço: {this.Preco:C}\n" +
-                $"-----------------------------\n";
+                $"Preço: {this.Preco:C}\n\n";
         }
     }
 }
