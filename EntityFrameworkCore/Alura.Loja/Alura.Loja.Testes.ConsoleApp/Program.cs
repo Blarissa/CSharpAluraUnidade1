@@ -17,8 +17,30 @@ namespace Alura.Loja.Testes.ConsoleApp
                 produtos.ForEach( p => {
                     Console.WriteLine(p);
                 });
+
+                Console.WriteLine("=================");
+                foreach (var e in contexto.ChangeTracker.Entries())
+                {
+                    Console.WriteLine(e.State);
+                }
+
+                var p1 = produtos.Last();
+                p1.Nome = "007 - O Espiao Que Me Amava";
+
+                //contexto.SaveChanges();
+
+                Console.WriteLine("=================");
+
+                produtos = contexto.Produtos.ToList();
+
+                foreach (var e in contexto.ChangeTracker.Entries())
+                {
+                    Console.WriteLine(e.State);
+                }
+
+
             }
-            
+
             Console.ReadLine();
         }
         /*
