@@ -28,6 +28,19 @@ namespace Alura.Loja.Testes.ConsoleApp
             compra.Produto = paoFrances;
             compra.Preco = paoFrances.PrecoUnitario * compra.Quantidade;
 
+            using (var contexto = new LojaContext())
+            {
+                var serviceProvider = contexto.GetInfrastructure<IServiceProvider>();
+                var loggerFactory = serviceProvider.GetService<ILoggerFactory>();
+                loggerFactory.AddProvider(SqlLoggerProvider.Create());
+
+                contexto.Compras.Add(compra);
+
+                ExibeEntries(contexto.ChangeTracker.Entries());
+
+                contexto.SaveChanges();
+            }
+
             Console.ReadLine();
         }
 
