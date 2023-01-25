@@ -10,10 +10,12 @@ namespace Alura.LeilaoOnline.WebApp.Controllers
     public class HomeController : Controller
     {
         AppDbContext _context;
+        ILeilaoDAO  _dao;
 
-        public HomeController()
+        public HomeController(ILeilaoDAO dao)
         {
             _context = new AppDbContext();
+            _dao = dao;
         }
 
         public IActionResult Index()
@@ -29,6 +31,8 @@ namespace Alura.LeilaoOnline.WebApp.Controllers
                     EmPregao = c.Leiloes.Where(l => l.Situacao == SituacaoLeilao.Pregao).Count(),
                     Finalizados = c.Leiloes.Where(l => l.Situacao == SituacaoLeilao.Finalizado).Count(),
                 });
+
+            categorias = _dao.BuscarCategorias();    
             return View(categorias);
         }
 
@@ -42,9 +46,11 @@ namespace Alura.LeilaoOnline.WebApp.Controllers
         [Route("[controller]/Categoria/{categoria}")]
         public IActionResult Categoria(int categoria)
         {
+            var categorias = _dao.BuscarCategorias();
+
             var categ = _context.Categorias
                 .Include(c => c.Leiloes)
-                .First(c => c.Id == categoria);
+                .First(c => c.Id == categoria);            
             return View(categ);
         }
 
@@ -59,6 +65,8 @@ namespace Alura.LeilaoOnline.WebApp.Controllers
                     c.Titulo.ToUpper().Contains(termoNormalized) ||
                     c.Descricao.ToUpper().Contains(termoNormalized) ||
                     c.Categoria.Descricao.ToUpper().Contains(termoNormalized));
+            
+            leiloes = _dao.BuscarLeiloes();
             return View(leiloes);
         }
     }
