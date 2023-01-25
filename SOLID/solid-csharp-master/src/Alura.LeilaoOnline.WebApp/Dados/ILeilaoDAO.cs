@@ -5,7 +5,7 @@ using Alura.LeilaoOnline.WebApp.Models;
 
 namespace Alura.LeilaoOnline.WebApp.Dados
 {
-    public class ILeilaoDAO
+    public interface ILeilaoDAO
     {
         public IEnumerable<Categoria> BuscarCategorias();
 
