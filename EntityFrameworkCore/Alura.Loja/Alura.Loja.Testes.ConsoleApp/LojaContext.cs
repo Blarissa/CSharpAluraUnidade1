@@ -9,6 +9,13 @@ namespace Alura.Loja.Testes.ConsoleApp
         public DbSet<Compra> Compras { get; set; }
         public DbSet<Promocao> Promocoes { get; internal set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder
+                .Entity<PromocaoProduto>()
+                .HasKey(pp => new { pp.PromocaoId, pp.ProdutoId});
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if(!optionsBuilder.IsConfigured)
