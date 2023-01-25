@@ -24,7 +24,7 @@
 - Finally e using
 
 ### Bibliotecas DDLs, documentação e usando o Nuget
-- Projeto de biblioteca Ver primeiro vídeo
+- Projeto de biblioteca
 - Modificadores de acesso em bibliotecas
 - Referencia de DLL
 - Documentando
