@@ -4,8 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Alura.LeilaoOnline.WebApp.Dados;
 using Alura.LeilaoOnline.WebApp.Models;
 using System;
-using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
+using Alura.LeilaoOnline.WebApp.Dados.EFCore;
 
 namespace Alura.LeilaoOnline.WebApp.Controllers
 {
@@ -13,7 +14,7 @@ namespace Alura.LeilaoOnline.WebApp.Controllers
     {
 
         AppDbContext _context;
-        LeilaoDAO _dao;
+        ILeilaoDAO _dao;
 
         public LeilaoController()
         {

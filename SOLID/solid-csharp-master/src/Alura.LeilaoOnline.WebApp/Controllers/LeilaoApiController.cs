@@ -2,8 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using Alura.LeilaoOnline.WebApp.Models;
 using Alura.LeilaoOnline.WebApp.Dados;
+using System;
 using System.Collections.Generic;
-using System.Linq;
+using Alura.LeilaoOnline.WebApp.Dados.EFCore;
 
 namespace Alura.LeilaoOnline.WebApp.Controllers
 {
@@ -12,53 +13,25 @@ namespace Alura.LeilaoOnline.WebApp.Controllers
     public class LeilaoApiController : ControllerBase
     {
         AppDbContext _context;
+        ILeilaoDAO _dao;
 
         public LeilaoApiController()
         {
             _context = new AppDbContext();
-        }
-
-        private IEnumerable<Leilao> BuscarLeiloes()
-        {
-            return _context.Leiloes.Include(
-                l => l.Categoria).ToList();
-        }
-
-        private Leilao BuscarPorId(int id)
-        {
-            return _context.Leiloes.First(c => c.Id == id);
-        }
-
-        private void Incluir(Leilao leilao)
-        {
-            _context.Leiloes.Add(leilao);
-            _context.SaveChanges();
-        }
-
-
-        private void Alterar(Leilao leilao)
-        {
-            _context.Leiloes.Update(leilao);
-            _context.SaveChanges();
-        }
-
-        private void Excluir(Leilao leilao)
-        {
-            _context.Leiloes.Remove(leilao);
-            _context.SaveChanges();
-        }
+            _dao = new LeilaoDAOComEFCore();
+        }        
 
         [HttpGet]
         public IActionResult EndpointGetLeiloes()
         {
-            var leiloes = BuscarLeiloes();
+            var leiloes = _dao.BuscarLeiloes();
             return Ok(leiloes);
         }
 
         [HttpGet("{id}")]
         public IActionResult EndpointGetLeilaoById(int id)
         {
-            var leilao = BuscarPorId(id);
+            var leilao = _dao.BuscarPorId(id);
             if (leilao == null)
             {
                 return NotFound();
@@ -69,7 +42,7 @@ namespace Alura.LeilaoOnline.WebApp.Controllers
         [HttpPost]
         public IActionResult EndpointPostLeilao(Leilao leilao)
         {
-            Incluir(leilao);
+            _dao.Incluir(leilao);
             return Ok(leilao);
         }
 
@@ -77,19 +50,19 @@ namespace Alura.LeilaoOnline.WebApp.Controllers
         [HttpPut]
         public IActionResult EndpointPutLeilao(Leilao leilao)
         {
-            Alterar(leilao);
+            _dao.Alterar(leilao);
             return Ok(leilao);
         }
 
         [HttpDelete("{id}")]
         public IActionResult EndpointDeleteLeilao(int id)
         {
-            var leilao = BuscarPorId(id);
+            var leilao = _dao.BuscarPorId(id);
             if (leilao == null)
             {
                 return NotFound();
             }
-            Excluir(leilao);
+            _dao.Excluir(leilao);
             return NoContent();
         }
 

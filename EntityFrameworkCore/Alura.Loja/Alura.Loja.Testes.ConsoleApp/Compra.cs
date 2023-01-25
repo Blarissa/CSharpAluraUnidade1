@@ -16,6 +16,5 @@
                 $"Preço total: {this.Preco:C}\n" +
                 $"\n"; ;
         }
-
     }
 }

@@ -3,19 +3,24 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Alura.LeilaoOnline.WebApp.Dados
+namespace Alura.LeilaoOnline.WebApp.Dados.EFCore
 {
-    public class LeilaoDAO
+    public class LeilaoDAOComEFCore : ILeilaoDAO
     {
         AppDbContext _context;
 
-        public LeilaoDAO(){
+        public LeilaoDAOComEFCore() {
             _context = new AppDbContext();
         }
 
         public IEnumerable<Categoria> BuscarCategorias()
         {
             return _context.Categorias.ToList();
+        }
+
+        public IEnumerable<Leilao> BuscarLeiloes(){
+            return _context.Leiloes.Include(
+                l => l.Categoria).ToList();
         }
 
         public Leilao BuscarPorId(int id)

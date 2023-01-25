@@ -13,17 +13,20 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            try
+            bool sucesso = true;
+            do
             {
-                CarregarContas();
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("CATCH NO METODO MAIN");
-            }
+                try
+                {
+                    CarregarContas();
+                }
+                catch (Exception ex)
+                {
+                    sucesso = false;
+                    Console.WriteLine("CATCH NO METODO MAIN", ex.Message);
+                }
 
-            Console.WriteLine("Execução finalizada. Tecle enter para sair");
-            Console.ReadLine();
+            } while (!sucesso);
         }
 
         private static void CarregarContas()
