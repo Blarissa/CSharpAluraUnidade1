@@ -12,12 +12,21 @@ namespace Alura.Loja.Testes.ConsoleApp
         public DateTime DataTermino { get; internal set; }
         public IList<PromocaoProduto> Produtos { get; internal set; }
 
+        public Promocao() { 
+            this.Produtos = new List<PromocaoProduto>();
+        }
+
+        public void IncluiProduto(Produto produto)
+        {
+            this.Produtos.Add(new PromocaoProduto() { Produto = produto });
+        }
+
         public override string ToString()
         {
             return $"Promoção {this.Descricao}\n" +
                 $"Data de Inicio: {this.DataInicio:t}\n" +
                 $"Data de termino: {this.DataTermino:t}\n" +                
                 $"\n"; ;
-        }
+        }        
     }
 }
