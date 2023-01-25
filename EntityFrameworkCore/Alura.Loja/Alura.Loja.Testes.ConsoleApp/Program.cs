@@ -16,7 +16,60 @@ namespace Alura.Loja.Testes.ConsoleApp
     {
         static void Main(string[] args)
         {
+            //IncluirPromocao();
 
+            using (var contexto2 = new LojaContext())
+            {
+                /*
+                        Include()           |             ThenInclude()
+                ------------------------------------------------------------------
+                que incluirá a entidade     |buscaremos uma Promocao que busca uma 
+                relacionada.                |PromocaoProduto, onde podemos acessar 
+                                            |o Produto.                                  
+                */
+
+                var promocao = contexto2
+                    .Promocoes
+                    .Include(p => p.Produtos)
+                    .ThenInclude(pp => pp.Produto)
+                    .FirstOrDefault();
+
+                Console.WriteLine("\nMotrando os produtos da promoção...");
+
+                foreach (var item in promocao.Produtos)
+                {
+                    Console.WriteLine(item.Produto);
+                }
+            }
+
+            Console.ReadLine();
+        }
+
+        private static void IncluirPromocao()
+        {
+            using (var contexto = new LojaContext())
+            {
+                var promocao = new Promocao();
+
+                promocao.Descricao = "Queima Total Janeiro 2023";
+                promocao.DataInicio = new DateTime(2023, 1, 1);
+                promocao.DataTermino = new DateTime(2023, 1, 31);
+
+                var produtos = contexto
+                    .Produtos
+                    .Where(p => p.Categoria.Equals("Bebida"))
+                    .ToList();
+
+                produtos.ForEach(p => promocao.IncluiProduto(p));
+
+                contexto.Promocoes.Add(promocao);
+                //ExibeEntries(contexto.ChangeTracker.Entries());
+                contexto.SaveChanges();
+            }
+        }
+
+        private static void UmParaUm()
+        {
             var fulano = new Cliente();
             fulano.Nome = "Fulaninho de Tal";
             fulano.EnderecoDeEntrega = new Endereco
@@ -33,10 +86,6 @@ namespace Alura.Loja.Testes.ConsoleApp
                 contexto.Clientes.Add(fulano);
                 contexto.SaveChanges();
             }
-
-
-
-            Console.ReadLine();
         }
 
         private static void MuitosParaMuitos()
