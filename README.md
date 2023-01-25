@@ -1,33 +1,4 @@
-<!--TOC-->
-- [Unidade 01](#unidade-01)
-  - [Curso C#](#curso-c)
-    - [:heavy_check_mark: Primeiros passos](#heavy_check_mark-primeiros-passos)
-    - [:heavy_check_mark: Entendendo herança e interface](#heavy_check_mark-entendendo-heranca-e-interface)
-    - [:heavy_check_mark: Entendendo exceções](#heavy_check_mark-entendendo-excecoes)
-    - [Array e tipos genéricos](#array-e-tipos-genericos)
-    - [List, lambda, linq](#list-lambda-linq)
-  - [:heavy_check_mark: C# Collections](#heavy_check_mark-c-collections)
-    - [:heavy_check_mark: Listas, arrays, listas ligadas, dicionários e conjuntos](#heavy_check_mark-listas-arrays-listas-ligadas-dicionarios-e-conjuntos)
-    - [:heavy_check_mark: Coleções ordenadas, arrays multidimensionais e LINQ](#heavy_check_mark-colecoes-ordenadas-arrays-multidimensionais-e-linq)
-  - [SOLID com C#](#solid-com-c)
-    - [Princípios da programação orientada a objetos](#principios-da-programacao-orientada-a-objetos)
-- [Unidade 02](#unidade-02)
-  - [:heavy_check_mark: HTTP](#heavy_check_mark-http)
-    - [:heavy_check_mark: Entendendo a web por baixo dos panos](#heavy_check_mark-entendendo-a-web-por-baixo-dos-panos)
-  - [:heavy_check_mark: Artigo](#heavy_check_mark-artigo)
-  - [C#](#c)
-    - [Paralelismo no mundo real](#paralelismo-no-mundo-real)
-  - [:heavy_check_mark: Tutoriais](#heavy_check_mark-tutoriais)
-- [Unidade 03](#unidade-03)
-  - [Entity Framework Core](#entity-framework-core)
-    - [Banco de dados de forma eficiente](#banco-de-dados-de-forma-eficiente)
-    - [Mapeando um banco pré-existente](#mapeando-um-banco-pre-existente)
-  - [.NET 5 e EF Core](#.net-5-e-ef-core)
-    - [Relacionando entidades](#relacionando-entidades)
-  - [Entity LinQ](#entity-linq)
-    - [Crie queries poderosas em C#](#crie-queries-poderosas-em-c)
-    - [Store Procedures e consultas com o LinQPad](#store-procedures-e-consultas-com-o-linqpad)
-<!--/TOC-->
+
 
 # Unidade 01
 ## Curso C# 
@@ -54,7 +25,7 @@
 - StackTrace e InnerException
 - Finally e using
 
- Bibliotecas DDLs, documentação e usando o Nuget
+### Bibliotecas DDLs, documentação e usando o Nuget
 - Projeto de biblioteca Ver primeiro vídeo
 - Modificadores de acesso em bibliotecas
 - Referencia de DLL
