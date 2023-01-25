@@ -1,5 +1,3 @@
-
-
 # Unidade 01
 ## Curso C# 
 ### :heavy_check_mark: Primeiros passos
@@ -64,8 +62,8 @@
 - Mais Operadores LINQ
 - Convertendo e Enumerando Coleções
 
-## SOLID com C#
-### Princípios da programação orientada a objetos
+## :heavy_check_mark: SOLID com C#
+### :heavy_check_mark: Princípios da programação orientada a objetos
 - Qualidade de software
 - Responsabilidade única
 - Inversão de dependências
