@@ -56,31 +56,7 @@ namespace Alura.Loja.Testes.ConsoleApp
                 foreach (var item in produto.Compras)
                 {
                     Console.WriteLine(item);
-                }
-
-                var produtoR = contexto
-                    .Produtos
-                    .Where(p => p.Id == 4003)
-                    .FirstOrDefault();
-
-                contexto.Produtos.Remove(produtoR);
-                contexto.SaveChanges();
-
-                produtoR = contexto
-                    .Produtos
-                    .Where(p => p.Id == 4004)
-                    .FirstOrDefault();
-
-                contexto.Produtos.Remove(produtoR);
-                contexto.SaveChanges();
-
-                produtoR = contexto
-                    .Produtos
-                    .Where(p => p.Id == 4005)
-                    .FirstOrDefault();
-                contexto.Produtos.Remove(produtoR);
-                contexto.SaveChanges();
-
+                }                
             }
 
             Console.ReadLine();

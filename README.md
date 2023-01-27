@@ -101,7 +101,7 @@
 # Unidade 03
 
 ## Entity Framework Core 
-### Banco de dados de forma eficiente
+### :heavy_check_mark: Banco de dados de forma eficiente
 - Introdução ao Entity Framework Core 
 - Manipulando objetos
 - Como o Entity monta o SQL?
