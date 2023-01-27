@@ -22,6 +22,12 @@ namespace Alura.Loja.Testes.ConsoleApp
                 var loggerFactory = contexto.GetService<ILoggerFactory>();
                 loggerFactory.AddProvider(SqlLoggerProvider.Create());
 
+                var compra = new Compra();
+                var p1 = contexto
+                    .Produtos
+                    .Where(p => p.Id == 2002)
+                    .FirstOrDefault();                
+
                 var cliente = contexto
                     .Clientes
                     .Include(c => c.EnderecoDeEntrega)
@@ -31,15 +37,49 @@ namespace Alura.Loja.Testes.ConsoleApp
 
                 var produto = contexto
                     .Produtos
-                    .Include(p => p.Compras)
                     .Where(p => p.Id == 2002)
                     .FirstOrDefault();
+
+                /*
+                 Chamaremos o método Entry() passando a referência de produto. 
+                 Pegaremos a coleção da propriedade Compra com o método Collection(p => p.Compras). 
+                 Faremos uma Query(), que filtrará com a condição Where(c => c.Preco > 10). 
+                 Carregaremos com Load() na referência passada no Entry(). 
+                 */
+                contexto.Entry(produto)
+                    .Collection(p => p.Compras)
+                    .Query()
+                    .Where(c => c.Preco > 10)
+                    .Load();
 
                 Console.WriteLine($"Mostrando as compras do produto {produto.Nome}");
                 foreach (var item in produto.Compras)
                 {
                     Console.WriteLine(item);
                 }
+
+                var produtoR = contexto
+                    .Produtos
+                    .Where(p => p.Id == 4003)
+                    .FirstOrDefault();
+
+                contexto.Produtos.Remove(produtoR);
+                contexto.SaveChanges();
+
+                produtoR = contexto
+                    .Produtos
+                    .Where(p => p.Id == 4004)
+                    .FirstOrDefault();
+
+                contexto.Produtos.Remove(produtoR);
+                contexto.SaveChanges();
+
+                produtoR = contexto
+                    .Produtos
+                    .Where(p => p.Id == 4005)
+                    .FirstOrDefault();
+                contexto.Produtos.Remove(produtoR);
+                contexto.SaveChanges();
 
             }
 
@@ -121,7 +161,7 @@ namespace Alura.Loja.Testes.ConsoleApp
             var p1 = new Produto() { Nome = "Suco de Laranja", Categoria = "Bebidas", PrecoUnitario = 8.79, Unidade = "Litros" };
             var p2 = new Produto() { Nome = "Café", Categoria = "Bebidas", PrecoUnitario = 12.45, Unidade = "Gramas" };
             var p3 = new Produto() { Nome = "Macarrão", Categoria = "Alimentos", PrecoUnitario = 4.23, Unidade = "Gramas" };
-
+     
             var promocaoDePascoa = new Promocao();
             promocaoDePascoa.Descricao = "Páscoa Feliz";
             promocaoDePascoa.DataInicio = DateTime.Now;
@@ -138,11 +178,11 @@ namespace Alura.Loja.Testes.ConsoleApp
                 loggerFactory.AddProvider(SqlLoggerProvider.Create());
 
                 //contexto.Promocoes.Add(promocaoDePascoa);
-
+                
                 //ExibeEntries(contexto.ChangeTracker.Entries());
 
-                var promocao = contexto.Promocoes.Find(3);
-                contexto.Promocoes.Remove(promocao);
+                //var promocao = contexto.Promocoes.Find(3);
+                //contexto.Promocoes.Remove(promocao);
                 contexto.SaveChanges();
             }
         }
