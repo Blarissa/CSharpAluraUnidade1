@@ -10,6 +10,7 @@ namespace Alura.Loja.Testes.ConsoleApp
         public double PrecoUnitario { get; internal set; }
         public string Unidade { get; internal set; }
         public IList<PromocaoProduto> Promocoes { get; internal set; }
+        public IList<Compra> Compras { get; set; }
 
         public override string ToString()
         {
@@ -17,7 +18,7 @@ namespace Alura.Loja.Testes.ConsoleApp
                 $"Nome: {this.Nome}\n" +
                 $"Categoria: {this.Categoria}\n" +
                 $"Preço unitário: {this.PrecoUnitario:C}\n" +
-                $"Unidade: {this.Unidade}\n" +
+                $"Unidade: {this.Unidade}\n" +                
                 $"\n";
         }
     }

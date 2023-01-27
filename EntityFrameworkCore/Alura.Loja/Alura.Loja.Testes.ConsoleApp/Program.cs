@@ -16,8 +16,38 @@ namespace Alura.Loja.Testes.ConsoleApp
     {
         static void Main(string[] args)
         {
-            //IncluirPromocao();
+            using (var contexto = new LojaContext())
+            {
+                var serviceProvider = contexto.GetInfrastructure<IServiceProvider>();
+                var loggerFactory = contexto.GetService<ILoggerFactory>();
+                loggerFactory.AddProvider(SqlLoggerProvider.Create());
 
+                var cliente = contexto
+                    .Clientes
+                    .Include(c => c.EnderecoDeEntrega)
+                    .FirstOrDefault();
+
+                Console.WriteLine($"Endereço de entrega: {cliente.EnderecoDeEntrega.Logradouro}");
+
+                var produto = contexto
+                    .Produtos
+                    .Include(p => p.Compras)
+                    .Where(p => p.Id == 2002)
+                    .FirstOrDefault();
+
+                Console.WriteLine($"Mostrando as compras do produto {produto.Nome}");
+                foreach (var item in produto.Compras)
+                {
+                    Console.WriteLine(item);
+                }
+
+            }
+
+            Console.ReadLine();
+        }
+
+        private static void ExibeProdutosDaPromocao()
+        {
             using (var contexto2 = new LojaContext())
             {
                 /*
@@ -41,8 +71,6 @@ namespace Alura.Loja.Testes.ConsoleApp
                     Console.WriteLine(item.Produto);
                 }
             }
-
-            Console.ReadLine();
         }
 
         private static void IncluirPromocao()
